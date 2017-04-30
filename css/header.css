@@ -1,0 +1,54 @@
+.header-column {
+	display: inline-block;
+	font-size: 20px;
+	margin-left: 10px;
+	height: 70px;
+	line-height: 70px;
+	padding-right: 20px;
+	padding-left: 20px;
+	position: relative;
+	top: 10px;
+
+}
+
+.header-column:hover{
+	background: #273658;
+	color: white;
+	cursor: pointer;
+	
+}
+
+#header{
+	display: inline-block;
+	width: 100vw;
+	height: 80px;
+	background: #f5f5f5;
+	z-index: 10;
+}
+
+#header-logo{
+	height: 50px;
+	width: 50px;
+	margin: 10px;
+	margin-left: 20px;
+	float: left;
+}
+
+#navigation-options{
+	float: right;
+	margin-right: 25px;
+}
+
+#heading{
+	font-size: 28px;
+	position: absolute;
+	line-height: 80px;
+	left: 90px
+}
+
+#heading-info{
+	font-size: 11px;
+	position: absolute;
+	top: 55px;
+	left: 170px
+}
