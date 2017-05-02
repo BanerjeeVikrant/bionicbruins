@@ -20,6 +20,8 @@
     $userCount = $result->num_rows;
     if ($userCount == 1) {
         $response["success"] = true;  
-    } 
+    } else{
+        $response["success"] = false;
+    }
     echo json_encode($response);
 ?>
