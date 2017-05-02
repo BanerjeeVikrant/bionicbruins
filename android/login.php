@@ -15,7 +15,7 @@
     $user_login = strip_tags(@$_POST['usr']);
     $password_login = strip_tags(@$_POST['psw']);
 
-    $result = $conn->query("SELECT id FROM members WHERE username='$user_login' AND password='$password_login' AND activated='1' LIMIT 1");
+    $result = $conn->query("SELECT id FROM members WHERE username='$user_login' AND password='$password_login' LIMIT 1");
 
     $userCount = $result->num_rows;
     if ($userCount == 1) {
