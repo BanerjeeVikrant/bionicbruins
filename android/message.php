@@ -11,8 +11,8 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $msg = $_GET['message'];
-    $username = $_GET['u'];
+    $msg = $_POST['message'];
+    $username = $_POST['u'];
 
     $checkme = $conn->query("SELECT * FROM members WHERE username='$username'");
     if ($checkme->num_rows == 1) {
@@ -20,7 +20,7 @@
         $usernameid = $getuser['id'];
     }
 
-    $toUser = $_GET['touser'];
+    $toUser = $_POST['touser'];
 
     $checkUser = $conn->query("SELECT * FROM members WHERE id='$toUser'");
     if ($checkme->num_rows == 1) {
