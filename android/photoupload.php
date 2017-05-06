@@ -36,7 +36,7 @@ if(isset($_POST['image'])){
 
     file_put_contents($path, $data);
 	
-	$sql = "UPDATE members SET profile_pic='http://bruincave.com/userdata/pictures/$username/$id.jpg' WHERE username='$username'";
+	$sql = "UPDATE members SET profile_pic='http://bruincave.com/bionicbruins/userdata/pictures/$username/$id.jpg' WHERE username='$username'";
 
 	if ($conn->query($sql) === TRUE) {
 		$response["success"] = true;  
