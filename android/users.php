@@ -78,17 +78,7 @@
                 $chat_last_name = $row["last_name"];
                 $chat_user_name = $row["username"];
                 $chat_userid = $row['id'];
-                $sex = $row['sex'];
-                if($chat_profile_pic == "" || $chat_profile_pic == NULL){
-                    if($sex == "1"){
-                        $chat_profile_pic = "https://upload.wikimedia.org/wikipedia/commons/3/34/PICA.jpg";
-                    }
-                    else{
-                        $chat_profile_pic = "http://www4.csudh.edu/Assets/CSUDH-Sites/History/images/Faculty-Profile-Pictures/Faculty%20Female%20Default%20Profile%20Picture.jpg";
-                    }
-                }else{
-                    $chat_profile_pic = "http://www.bruincave.com/m/" . $chat_profile_pic;
-                }
+                
                 $chat_both_name = $chat_first_name . " " . $chat_last_name;
                 if (isset($_POST['s'])) {
                     if (! (startsWith($chat_first_name, $_POST['s']) || startsWith($chat_last_name, $_POST['s']) || startsWith($chat_user_name, $_POST['s']) || startsWith($chat_both_name, $_POST['s']) ) ) {
