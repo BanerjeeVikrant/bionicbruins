@@ -37,8 +37,8 @@ for($i=0; $i<$results->num_rows; $i++) {
     $row = $results->fetch_assoc();
     $id = $row['id'];
     $message = $row['message'];
-    $fromUser = $row['fromUser'];
-    $toUser = $row['toUser'];
+    $fromUser = $row['fromuser'];
+    $toUser = $row['touser'];
 
     
     if($fromUser == $friendId){
