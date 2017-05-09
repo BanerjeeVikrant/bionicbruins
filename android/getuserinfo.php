@@ -31,7 +31,7 @@ echo '
                     "firstname": "'.$yourfirstname.'",
                     "lastname": "'.$yourlastname.'",
                     "userpic": "'.$yourprofilepic.'",
-                    "name": "'.$yourfirstname. " " .$yourlastname.'",
+                    "name": "'.$yourfirstname. " " .$yourlastname.'"
                 }  
     ]
 }
