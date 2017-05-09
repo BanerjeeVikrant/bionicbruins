@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 $username = $_POST['username'];
 $msgId = $_POST['id'];
 
-$delete = $conn->query("DELETE FROM messages WHERE id='$id'");
+$delete = $conn->query("DELETE FROM messages WHERE id='$msgId'");
 
 $response["success"] = true; 
 echo json_encode($response);
