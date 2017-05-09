@@ -2,7 +2,7 @@
 
 $servername = "localhost";
 $username1 = "root";
-$password = "H@ll054321";
+$password = "";
 $dbname = "bionicbruins";
 
 // Create connection
@@ -12,7 +12,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$username = $_POST['username'];
+$username = $_POST['u'];
 
 
 $query = $conn->query("SELECT * FROM members WHERE username='$username'");
