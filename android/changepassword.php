@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 $username = $_POST['u'];
 $password = $_POST['passwordNow'];
 
-$sql = "UPDATE users SET password='$password' WHERE username='$username'";
+$sql = "UPDATE members SET password='$password' WHERE username='$username'";
 $query = $conn->query($sql);
 
 $response["success"] = true;  
