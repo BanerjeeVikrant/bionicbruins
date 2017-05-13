@@ -22,6 +22,7 @@ $yourfirstname = $row['first_name'];
 $yourlastname = $row['last_name'];
 $yourprofilepic = $row['profile_pic'];
 $yourid = $row['id'];
+$yourpassword = $row['password'];
 
 echo '
 {
@@ -31,6 +32,7 @@ echo '
                     "firstname": "'.$yourfirstname.'",
                     "lastname": "'.$yourlastname.'",
                     "userpic": "'.$yourprofilepic.'",
+                    "password": "'.$yourpassword.'",
                     "name": "'.$yourfirstname. " " .$yourlastname.'"
                 }  
     ]
