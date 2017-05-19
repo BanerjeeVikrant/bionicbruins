@@ -12,8 +12,8 @@
     }
     include "helper.php";
 
-    $offset = $_GET['o'];
-    $username = $_GET['u'];
+    $offset = $_POST['o'];
+    $username = $_POST['u'];
 
     
     $sql =  "SELECT * FROM posts WHERE 1 ORDER BY id DESC LIMIT $offset,5";
@@ -52,39 +52,7 @@
                 "time_added":"'.$timestr.'"
                 
             ';  
-            $commentsArr = "";
-
-            foreach ($commentsid_array as $value) {
-                if ($value != '') {
-                    $comment = $conn->query("SELECT * FROM comments WHERE id='$value'");
-
-                    $get_comment = $comment->fetch_assoc();
-
-                    $body = $get_comment['comment'];
-                    $from_ = $get_comment['from'];
-
-                    $query = $conn->query("SELECT * FROM users WHERE id='$from_'");
-                    $row = $query->fetch_assoc();
-                    $from = $row['username'];
-
-                    if ($commentsArr != "") {
-                        $commentsArr = $commentsArr.",";
-                    }
-                    if ($body != "") {
-
-                        $commentsArr .= "
-                                        {
-                                          'body':'$body',
-                                          'from':'$from'
-                                        }";
-                    }
-                 }
-            }
-            echo'
-                "comments": ['.$commentsArr.'
-                            ]
-            }';      
-
+            
             $i = $i + 1;
         }
                 
