@@ -51,13 +51,14 @@
                 "by":'.$by.',
                 "time_added":"'.$timestr.'"
                 
-            ';  
+            }';  
             
             $i = $i + 1;
         }
                 
         echo "
     ]}
+
 ";
     }
 ?>
