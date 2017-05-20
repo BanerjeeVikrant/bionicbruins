@@ -52,14 +52,13 @@
     }
     $results_a = $conn->query($sql);
     $rows = [];
-    if($search != ""){
-        while ($row = $results_a->fetch_assoc()) {
-            $id_user = $row["id"];
-            if(in_array($id_user, $name_array_explode)){
-                
-            }else{
-                $rows[] = $id_user;
-            }
+
+    while ($row = $results_a->fetch_assoc()) {
+        $id_user = $row["id"];
+        if(in_array($id_user, $name_array_explode)){
+            
+        }else{
+            $rows[] = $id_user;
         }
     }
 
